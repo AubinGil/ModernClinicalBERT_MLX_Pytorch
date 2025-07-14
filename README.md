@@ -32,15 +32,8 @@ Accuracy	~65%
 
 📁 Project Structure
 ├── run_readmission.py        # Main training and evaluation script
-├── chunking.py               # Chunked dataset logic for long text
-├── focal_loss.py             # Custom focal loss implementation
-├── data/                     # Preprocessed MIMIC-IV CSVs (train/val/test)
 ├── outputs/                  # Model checkpoints, metrics, and plots
-✅ Features
-•	Training logs and performance curves (loss, AUC, F1)
-•	Confusion matrix visualization at evaluation
-•	Resumable training with model checkpointing
-•	Supports evaluation-only mode for inference
+
 
 🔧 Setup
 Requirements:
