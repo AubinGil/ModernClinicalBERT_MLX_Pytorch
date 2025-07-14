@@ -48,3 +48,16 @@ pip install -r requirements.txt
 •	Threshold tuning for optimal F1 or recall
 •	Integration with hospital triage dashboards
 
+Call training:
+!python run_readmission.py \
+  --task_name readmission \
+  --do_train \
+  --do_eval \
+  --data_dir /______ \
+  --bert_model Simonlee711/Clinical_ModernBERT \
+  --output_dir _____ \
+  --num_train_epochs 5  \
+  --train_batch_size 8 \
+  --max_seq_length 512 \
+  --learning_rate 5e-6
+
