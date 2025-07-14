@@ -73,11 +73,5 @@ python run_readmission.py \
   --max_seq_length 512 \
   --learning_rate 5e-6
 
-@misc{mimiciv_v3,
-  author    = {Johnson, Alistair and Bulgarelli, Lucas and Pollard, Tom and Gow, Brian and Moody, Benjamin and Horng, Steven and Celi, Leo Anthony and Mark, Roger},
-  title     = {MIMIC-IV (version 3.1)},
-  year      = {2024},
-  publisher = {PhysioNet},
-  doi       = {10.13026/kpb9-mt58},
-  url       = {https://physionet.org/content/mimiciv/}
-}
+Johnson, A., Bulgarelli, L., Pollard, T., Gow, B., Moody, B., Horng, S., Celi, L. A., & Mark, R. (2024). MIMIC-IV (version 3.1). PhysioNet. https://doi.org/10.13026/kpb9-mt58
+
