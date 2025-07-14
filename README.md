@@ -1,63 +1,83 @@
-🔍 Predicting 30-Day Hospital Readmission from Discharge Notes (MIMIC-IV)
-This project leverages discharge summaries from the MIMIC-IV clinical dataset to predict whether a patient will be readmitted within 30 days of hospital discharge using deep learning and transformer-based language models.
+# 🏥 Predicting 30-Day Hospital Readmission from Discharge Notes (MIMIC-IV)
 
+This repository explores clinical language modeling to predict whether a patient will be readmitted within 30 days of hospital discharge. Leveraging discharge summaries from the MIMIC-IV dataset, the model fine-tunes a domain-specific BERT architecture to capture subtle linguistic cues associated with readmission risks.
 
-🧠 Project Overview
-•	Objective: Predict unplanned hospital readmissions using discharge notes from ICU stays in MIMIC-IV.
-•	Approach: Fine-tune a domain-specific BERT model on chunked clinical text with focal loss to address class imbalance and long input sequences.
-🚀 Model Architecture
-•	🧠 Base Model: Simonlee711/Clinical_ModernBERT
-•	✂️ Chunked Input Processing: Handles long notes (up to 10,000 tokens) by splitting into 512-token chunks and aggregating BERT outputs with mean pooling.
-•	🎯 Focal Loss: Custom loss function to focus on harder-to-classify cases and deal with class imbalance.
-•	⚡️ AMP (Mixed Precision): Accelerates training on GPU using PyTorch’s torch.cuda.amp.
+## 📌 Project Overview
 
+- **Objective:** Predict unplanned hospital readmissions using discharge notes from ICU stays in MIMIC-IV.
+- **Approach:** Fine-tune `Clinical_ModernBERT` on chunked discharge summaries using a custom focal loss function to address long input sequences and class imbalance.
+- **Key Features:**
+  - ✅ Chunk-based input handling for long notes
+  - ✅ Focal loss implementation
+  - ✅ Mixed precision training with AMP
+  - ✅ Evaluation with AUC, F1 score, and accuracy
 
-📊 Dataset: MIMIC-IV
-•	Source: MIMIC-IV v2.2
-•	Cohort: Adult ICU patients with documented discharge summaries.
-•	Inputs: Combined clinical note sections from the noteevents and structured columns, including:
-o	Chief Complaint
-o	History of Present Illness
-o	Major Procedure
-o	Brief Hospital Course
-o	Discharge Diagnosis
-o	Discharge Instructions
-•	Target: Binary label for 30-day unplanned hospital readmission.
+## 🧠 Model Architecture
 
-📈 Performance (Validation/Test)
-Metric	Score
-AUC	0.7111
-F1 Score	0.67 (Readmitted), 0.63 (Not Readmitted)
-Accuracy	~65%
+| Component              | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| 🧠 Base Model          | `Simonlee711/Clinical_ModernBERT` (Transformer-based language model)        |
+| ✂️ Chunked Input        | Split notes into 512-token chunks; apply mean pooling over BERT outputs     |
+| 🎯 Loss Function        | Custom focal loss to prioritize hard-to-classify cases                      |
+| ⚡️ Training Acceleration| Enabled via `torch.cuda.amp` (Automatic Mixed Precision)                    |
 
-📁 Project Structure
+## 🗂 Dataset: MIMIC-IV
+
+- **Source:** MIMIC-IV v2.2
+- **Cohort:** Adult ICU patients with discharge summaries
+- **Inputs:** Combined sections from `noteevents` and structured EHR columns:
+  - Chief Complaint
+  - History of Present Illness
+  - Major Procedure
+  - Brief Hospital Course
+  - Discharge Diagnosis
+  - Discharge Instructions
+- **Target:** Binary label for 30-day readmission
+
+## 📊 Performance (Validation/Test)
+
+| Metric   | Score                   |
+|----------|------------------------|
+| AUC      | 0.7111                  |
+| F1 Score | 0.67 (Readmitted)       |
+|          | 0.63 (Not Readmitted)   |
+| Accuracy | ~65%                    |
+
+## 📁 Project Structure
+
+```bash
 ├── run_readmission.py        # Main training and evaluation script
-├── outputs/                  # Model checkpoints, metrics, and plots
+├── outputs/                  # Saved model checkpoints, metrics, plots
+├── requirements.txt          # Required dependencies
 
 
-🔧 Setup
-Requirements:
-•	Python ≥ 3.8
-•	PyTorch ≥ 2.0
-•	Huggingface transformers
-•	scikit-learn, pandas, tqdm, matplotlib
-pip install -r requirements.txt
-🧪 Future Enhancements
-•	Multi-modal model with labs, vitals, and demographics
-•	Time-aware models (e.g., ClinicalBERT + LSTM)
-•	Threshold tuning for optimal F1 or recall
-•	Integration with hospital triage dashboards
 
-Call training:
-!python run_readmission.py \
+Python ≥ 3.8  
+PyTorch ≥ 2.0  
+Huggingface transformers  
+scikit-learn  
+pandas  
+tqdm  
+matplotlib
+
+
+python run_readmission.py \
   --task_name readmission \
   --do_train \
   --do_eval \
-  --data_dir /______ \
+  --data_dir /path/to/data \
   --bert_model Simonlee711/Clinical_ModernBERT \
-  --output_dir _____ \
-  --num_train_epochs 5  \
+  --output_dir /path/to/save \
+  --num_train_epochs 5 \
   --train_batch_size 8 \
   --max_seq_length 512 \
   --learning_rate 5e-6
 
+@misc{mimiciv_v3,
+  author    = {Johnson, Alistair and Bulgarelli, Lucas and Pollard, Tom and Gow, Brian and Moody, Benjamin and Horng, Steven and Celi, Leo Anthony and Mark, Roger},
+  title     = {MIMIC-IV (version 3.1)},
+  year      = {2024},
+  publisher = {PhysioNet},
+  doi       = {10.13026/kpb9-mt58},
+  url       = {https://physionet.org/content/mimiciv/}
+}
