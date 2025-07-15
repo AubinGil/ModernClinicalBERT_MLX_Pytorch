@@ -19,7 +19,7 @@
 |------------------------|-----------------------------------------------------------------------------|
 | 🧠 Base Model          | `Simonlee711/Clinical_ModernBERT` (Transformer-based language model)        |
 | ✂️ Chunked Input        | Split notes into 512-token chunks; apply mean pooling over BERT outputs     |
-| 🎯 Loss Function        | Custom focal loss to prioritize hard-to-classify cases                      |
+| 🎯 Loss Function        | pos_weight is used to manually rebalance the training process, ensuring the model doesn't disproportionately favor one category over another |
 | ⚡️ Training Acceleration| Enabled via `torch.cuda.amp` (Automatic Mixed Precision)                    |
 
 ## 🗂 Dataset: MIMIC-IV
