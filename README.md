@@ -51,7 +51,6 @@ This repository explores clinical language modeling to predict whether a patient
 ├── requirements.txt          # Required dependencies
 
 
-
 Python ≥ 3.8  
 PyTorch ≥ 2.0  
 Huggingface transformers  
@@ -72,6 +71,7 @@ python run_readmission.py \
   --train_batch_size 8 \
   --max_seq_length 512 \
   --learning_rate 5e-6
-
+```
+## Acknowlegment 
 Johnson, A., Bulgarelli, L., Pollard, T., Gow, B., Moody, B., Horng, S., Celi, L. A., & Mark, R. (2024). MIMIC-IV (version 3.1). PhysioNet. https://doi.org/10.13026/kpb9-mt58
 
