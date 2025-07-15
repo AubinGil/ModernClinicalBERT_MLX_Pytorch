@@ -38,9 +38,9 @@ This repository explores clinical language modeling to predict whether a patient
 
 | Metric   | Score                   |
 |----------|------------------------|
-| AUC      | 0.7111                  |
-| F1 Score | 0.67 (Readmitted)       |
-|          | 0.63 (Not Readmitted)   |
+| AUC      | 0.7023                  |
+| F1 Score | 0.65 (Readmitted)       |
+|          | 0.64 (Not Readmitted)   |
 | Accuracy | ~65%                    |
 
 ## 📁 Project Structure
