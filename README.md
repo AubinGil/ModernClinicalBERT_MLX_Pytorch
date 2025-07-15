@@ -80,17 +80,6 @@ Lee, S. (2025). Clinical_ModernBERT (Revision 24e72d6). Hugging Face. https://hu
 
 
 
-📊 Classification Report:
-                precision    recall  f1-score   support
-
-Not Readmitted       0.64      0.64      0.64      6700
-    Readmitted       0.65      0.65      0.65      6825
-
-      accuracy                           0.65     13525
-     macro avg       0.65      0.65      0.65     13525
-  weighted avg       0.65      0.65      0.65     13525
-
-
 ✅ Final AUC:  0.7023
 
 
