@@ -72,7 +72,28 @@ python run_readmission.py \
   --max_seq_length 512 \
   --learning_rate 5e-6
 ```
+
 ## Acknowlegment 
 Johnson, A., Bulgarelli, L., Pollard, T., Gow, B., Moody, B., Horng, S., Celi, L. A., & Mark, R. (2024). MIMIC-IV (version 3.1). PhysioNet. https://doi.org/10.13026/kpb9-mt58
 
 Lee, S. (2025). Clinical_ModernBERT (Revision 24e72d6). Hugging Face. https://huggingface.co/Simonlee711/Clinical_ModernBERT
+
+
+
+📊 Classification Report:
+                precision    recall  f1-score   support
+
+Not Readmitted       0.64      0.64      0.64      6700
+    Readmitted       0.65      0.65      0.65      6825
+
+      accuracy                           0.65     13525
+     macro avg       0.65      0.65      0.65     13525
+  weighted avg       0.65      0.65      0.65     13525
+
+
+✅ Final AUC:  0.7023
+
+
+
+!<img width="616" height="455" alt="image" src="https://github.com/user-attachments/assets/bb6aac0e-ab3f-49d0-a8a9-b7c59dff2671" />
+
