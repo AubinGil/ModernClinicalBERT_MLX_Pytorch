@@ -1,6 +1,7 @@
 # 🏥 Predicting 30-Day Hospital Readmission from Discharge Notes (MIMIC-IV)
 
-This repository explores clinical language modeling to predict whether a patient will be readmitted within 30 days of hospital discharge. Leveraging discharge summaries from the MIMIC-IV dataset, the model fine-tunes a domain-specific BERT architecture to capture subtle linguistic cues associated with readmission risks.
+🧠 This repository explores clinical language modeling to predict whether a patient will be readmitted within 30 days of hospital discharge. Leveraging discharge summaries from the MIMIC-IV dataset, the model fine-tunes Clinical_ModernBERT, a cutting-edge domain-specific transformer architecture optimized for medical text.
+🚀 Unlike standard BERT models which typically handle input lengths up to 512 tokens, Clinical_ModernBERT supports sequences up to 8192 tokens, enabling it to process entire clinical notes without truncation. This expanded context window allows the model to capture rich, nuanced medical information spanning discharge summaries, assessments, and care plans—boosting its ability to detect patterns linked to readmission risk.
 
 ## 📌 Project Overview
 
