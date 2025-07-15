@@ -75,3 +75,4 @@ python run_readmission.py \
 ## Acknowlegment 
 Johnson, A., Bulgarelli, L., Pollard, T., Gow, B., Moody, B., Horng, S., Celi, L. A., & Mark, R. (2024). MIMIC-IV (version 3.1). PhysioNet. https://doi.org/10.13026/kpb9-mt58
 
+Lee, S. (2025). Clinical_ModernBERT (Revision 24e72d6). Hugging Face. https://huggingface.co/Simonlee711/Clinical_ModernBERT
