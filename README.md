@@ -73,11 +73,6 @@ python run_readmission.py \
   --learning_rate 5e-6
 ```
 
-## Acknowlegment 
-Johnson, A., Bulgarelli, L., Pollard, T., Gow, B., Moody, B., Horng, S., Celi, L. A., & Mark, R. (2024). MIMIC-IV (version 3.1). PhysioNet. https://doi.org/10.13026/kpb9-mt58
-
-Lee, S. (2025). Clinical_ModernBERT (Revision 24e72d6). Hugging Face. https://huggingface.co/Simonlee711/Clinical_ModernBERT
-
 
 
 ✅ Final AUC:  0.7023
@@ -85,6 +80,14 @@ Lee, S. (2025). Clinical_ModernBERT (Revision 24e72d6). Hugging Face. https://hu
 
 
 !<img width="616" height="455" alt="image" src="https://github.com/user-attachments/assets/bb6aac0e-ab3f-49d0-a8a9-b7c59dff2671"/>
+
+
+
+## Acknowlegment 
+Johnson, A., Bulgarelli, L., Pollard, T., Gow, B., Moody, B., Horng, S., Celi, L. A., & Mark, R. (2024). MIMIC-IV (version 3.1). PhysioNet. https://doi.org/10.13026/kpb9-mt58
+
+Lee, S. (2025). Clinical_ModernBERT (Revision 24e72d6). Hugging Face. https://huggingface.co/Simonlee711/Clinical_ModernBERT
+
 
 ## Disclaimer
 This tool shows the results of research conducted in the Computational Biology Branch, NCBI. The information produced on this website is not intended for direct diagnostic use or medical decision-making without review and oversight by a clinical professional. Individuals should not change their health behavior solely on the basis of information produced on this website. NIH does not independently verify the validity or utility of the information produced by this tool. If you have questions about the information produced on this website, please see a health care professional. More information about NCBI's disclaimer policy is available.
